@@ -10,6 +10,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     int a = 0;
+    int b = 0;
     return MaterialApp(
       title: 'Wonderful Indonesia',
       debugShowCheckedModeBanner: false,
