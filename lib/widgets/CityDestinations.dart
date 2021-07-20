@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:wonderful_indonesia/models/DestinationBundle.dart';
+import 'package:wonderful_indonesia/screens/city_list_screen.dart';
+import 'package:wonderful_indonesia/screens/place_list_screen.dart';
 
 import '../size_config.dart';
 
@@ -29,6 +31,9 @@ class CityDestinations extends StatelessWidget {
               GestureDetector(
                 onTap: () {
                   print('See All for Destinations');
+                  Navigator.push(context, MaterialPageRoute(builder: (context) {
+                    return CityList();
+                  }));
                 },
                 child: Text(
                   'see all',
@@ -53,6 +58,11 @@ class CityDestinations extends StatelessWidget {
               return GestureDetector(
                 onTap: () {
                   print(cityBundles.id);
+                  Navigator.push(context, MaterialPageRoute(builder: (context) {
+                    return ListofPlace(
+                        listdestinations: cityBundles.destinations,
+                        CityName: cityBundles.title);
+                  }));
                 },
                 child: Container(
                   margin: EdgeInsets.all(SizeConfig.defaultSize),

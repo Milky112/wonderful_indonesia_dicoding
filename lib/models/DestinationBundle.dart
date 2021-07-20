@@ -16,7 +16,8 @@ class CityBundle {
 
 class DestinationBundle {
   final int id, rating;
-  final String title, address, imageSrc;
+  final String title, address;
+  final List<String> imageSrc;
 
   DestinationBundle(
       {required this.id,
@@ -26,6 +27,27 @@ class DestinationBundle {
       required this.imageSrc});
 }
 
+List<String> ImageBali = [
+  'assets/images/pantai_kuta.jpg',
+  'assets/images/pantai_kuta.jpg',
+  'assets/images/pura_tanah_lot.jpg',
+  'assets/images/nusa_peninda.jpg',
+];
+
+List<String> ImageTanahLot = [
+  'assets/images/pura_tanah_lot.jpg',
+  'assets/images/pura_tanah_lot.jpg',
+  'assets/images/pantai_kuta.jpg',
+  'assets/images/nusa_peninda.jpg',
+];
+
+List<String> ImageNusaPerinda = [
+  'assets/images/nusa_peninda.jpg',
+  'assets/images/nusa_peninda.jpg',
+  'assets/images/pantai_kuta.jpg',
+  'assets/images/pura_tanah_lot.jpg',
+];
+
 //list of places
 List<DestinationBundle> destinationsBali = [
   DestinationBundle(
@@ -33,21 +55,21 @@ List<DestinationBundle> destinationsBali = [
     rating: 5,
     title: "Pantai Kuta",
     address: "Pantai Kuta Barat",
-    imageSrc: 'assets/images/pantai_kuta.jpg',
+    imageSrc: ImageBali,
   ),
   DestinationBundle(
     id: 2,
     rating: 4,
     title: "Pura Tanah Lot",
     address: "Pura Tanah Lot",
-    imageSrc: 'assets/images/pura_tanah_lot.jpg',
+    imageSrc: ImageTanahLot,
   ),
   DestinationBundle(
     id: 3,
     rating: 5,
     title: "Nusa Peninda",
     address: "Nusa Peninda Bali",
-    imageSrc: 'assets/images/nusa_peninda.jpg',
+    imageSrc: ImageNusaPerinda,
   )
 ];
 
@@ -57,35 +79,35 @@ List<DestinationBundle> destinationsJakarta = [
     rating: 5,
     title: "Pantai Kuta",
     address: "Pantai Kuta Barat",
-    imageSrc: 'assets/images/pantai_kuta.jpg',
+    imageSrc: ImageBali,
   ),
   DestinationBundle(
     id: 2,
     rating: 4,
     title: "Pura Tanah Lot",
     address: "Pura Tanah Lot",
-    imageSrc: 'assets/images/pura_tanah_lot.jpg',
+    imageSrc: ImageTanahLot,
   ),
   DestinationBundle(
     id: 3,
     rating: 5,
     title: "Nusa Peninda",
     address: "Nusa Peninda Bali",
-    imageSrc: 'assets/images/nusa_peninda.jpg',
+    imageSrc: ImageNusaPerinda,
   ),
   DestinationBundle(
     id: 4,
     rating: 5,
     title: "Nusa Peninda",
     address: "Nusa Peninda Bali",
-    imageSrc: 'assets/images/nusa_peninda.jpg',
+    imageSrc: ImageNusaPerinda,
   ),
   DestinationBundle(
     id: 5,
     rating: 5,
     title: "Nusa Peninda",
     address: "Nusa Peninda Bali",
-    imageSrc: 'assets/images/nusa_peninda.jpg',
+    imageSrc: ImageNusaPerinda,
   )
 ];
 
@@ -95,21 +117,21 @@ List<DestinationBundle> destinationsBestPlaces = [
     rating: 5,
     title: "Pantai Kuta",
     address: "Pantai Kuta Barat",
-    imageSrc: 'assets/images/pantai_kuta.jpg',
+    imageSrc: ImageBali,
   ),
   DestinationBundle(
     id: 2,
     rating: 4,
     title: "Pura Tanah Lot",
     address: "Pura Tanah Lot",
-    imageSrc: 'assets/images/pura_tanah_lot.jpg',
+    imageSrc: ImageTanahLot,
   ),
   DestinationBundle(
     id: 3,
     rating: 5,
     title: "Nusa Peninda",
     address: "Nusa Peninda Bali",
-    imageSrc: 'assets/images/nusa_peninda.jpg',
+    imageSrc: ImageNusaPerinda,
   )
 ];
 
@@ -135,6 +157,73 @@ List<CityBundle> cityBundle = [
     id: 3,
     places: destinationsBali.length,
     title: 'Medan',
+    address: 'East Indonesia',
+    imageSrc: 'assets/images/pantai_kuta.jpg',
+    destinations: destinationsBali,
+  ),
+];
+
+List<CityBundle> allCityBundle = [
+  CityBundle(
+    id: 1,
+    places: destinationsBali.length,
+    title: 'Bali',
+    address: 'East Indonesia',
+    imageSrc: 'assets/images/pantai_kuta.jpg',
+    destinations: destinationsBali,
+  ),
+  CityBundle(
+    id: 2,
+    places: destinationsJakarta.length,
+    title: 'Jakarta',
+    address: 'East Indonesia',
+    imageSrc: 'assets/images/pantai_kuta.jpg',
+    destinations: destinationsJakarta,
+  ),
+  CityBundle(
+    id: 3,
+    places: destinationsBali.length,
+    title: 'Medan',
+    address: 'East Indonesia',
+    imageSrc: 'assets/images/pantai_kuta.jpg',
+    destinations: destinationsBali,
+  ),
+  CityBundle(
+    id: 4,
+    places: destinationsBali.length,
+    title: 'Bali',
+    address: 'East Indonesia',
+    imageSrc: 'assets/images/pantai_kuta.jpg',
+    destinations: destinationsBali,
+  ),
+  CityBundle(
+    id: 5,
+    places: destinationsBali.length,
+    title: 'Bali',
+    address: 'East Indonesia',
+    imageSrc: 'assets/images/pantai_kuta.jpg',
+    destinations: destinationsBali,
+  ),
+  CityBundle(
+    id: 6,
+    places: destinationsBali.length,
+    title: 'Bali',
+    address: 'East Indonesia',
+    imageSrc: 'assets/images/pantai_kuta.jpg',
+    destinations: destinationsBali,
+  ),
+  CityBundle(
+    id: 7,
+    places: destinationsBali.length,
+    title: 'Bali',
+    address: 'East Indonesia',
+    imageSrc: 'assets/images/pantai_kuta.jpg',
+    destinations: destinationsBali,
+  ),
+  CityBundle(
+    id: 8,
+    places: destinationsBali.length,
+    title: 'Bali',
     address: 'East Indonesia',
     imageSrc: 'assets/images/pantai_kuta.jpg',
     destinations: destinationsBali,

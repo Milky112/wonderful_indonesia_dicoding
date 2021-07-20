@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:wonderful_indonesia/models/DestinationBundle.dart';
 import 'package:wonderful_indonesia/size_config.dart';
+import 'package:wonderful_indonesia/widgets/BestDestinations.dart';
 import 'package:wonderful_indonesia/widgets/CityDestinations.dart';
 
 class HomeScreen extends StatelessWidget {
-  const HomeScreen({Key? key}) : super(key: key);
-
+  final ScrollController _controller = ScrollController();
   @override
   Widget build(BuildContext context) {
     SizeConfig().init(context);
@@ -16,6 +16,7 @@ class HomeScreen extends StatelessWidget {
         title: Image.asset("assets/images/travel_logo2.png"),
       ),
       body: ListView(
+        scrollDirection: Axis.vertical,
         children: [
           Padding(
             padding: EdgeInsets.all(SizeConfig.defaultSize * 3),
@@ -30,14 +31,7 @@ class HomeScreen extends StatelessWidget {
           ),
           CityDestinations(),
           SizedBox(height: SizeConfig.defaultSize * 2),
-          Column(
-            children: [
-              Padding(
-                padding: EdgeInsets.symmetric(
-                    horizontal: SizeConfig.defaultSize * 2),
-              ),
-            ],
-          )
+          BestDestinations(),
         ],
       ),
     );
